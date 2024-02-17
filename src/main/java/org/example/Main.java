@@ -13,11 +13,13 @@ public class Main {
     public static void main(String[] args) {
 
         // Ejercicio 1
-       /* Operacion operacion1 = new Operacion(5, 4);
+        System.out.println("EJERCICIO 01:");
+
+        Operacion operacion1 = new Operacion(5, 4);
         Operacion operacion2 = new Operacion();
 
-        int num1 = operacion1.getNumero1();
-        int num2 = operacion1.getNumero2();
+        float num1 = operacion1.getNumero1();
+        float num2 = operacion1.getNumero2();
         System.out.println("Los números con los que se operará son: " + num1 + " y " + num2);
 
         System.out.println("Suma = " + operacion1.sumar());
@@ -31,7 +33,9 @@ public class Main {
         System.out.println("Multiplicación = " + operacion2.multiplicar());
         System.out.println("División = " + operacion2.dividir());
 
+
         // Ejercicio 2
+        System.out.println("EJERCICIO 02:");
 
         Cuenta cuenta1 = new Cuenta();
         Cuenta cuenta2 = new Cuenta();
@@ -45,9 +49,10 @@ public class Main {
         cuenta4.getNumeroCuenta();
         cuenta5.getNumeroCuenta();
 
-        cuenta1.getSaldoActual(); */
+        cuenta1.getSaldoActual();
 
         // Ejercicio 3
+        System.out.println("EJERCICIO 03:");
 
         List<calculosFormas> formasLista = new ArrayList<>();
         formasLista.add(new Circulo(35));
@@ -60,11 +65,5 @@ public class Main {
                     "\nSu área es: " + forma.calcularArea() +
                     "\nSu perímetro es: " + forma.calcularPerimetro()));
 
-
-        // Agregar a todas las clases el TOString
-        // Preguntar el tema de getters y setters
-        // ver el tema del numero de cuenta
-        // Preguntar el tema de una clase creando objetos de su propia clase
-        // ver excepciones más que nada en los pedidos por consola
     }
 }
