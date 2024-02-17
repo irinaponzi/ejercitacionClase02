@@ -3,6 +3,7 @@ package org.example.ejercicio1;
 import java.util.Scanner;
 
 public class Operacion {
+
     private float numero1;
     private float numero2;
 
