@@ -35,15 +35,13 @@ public class Operacion {
     public void crearOperacion() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Por favor, ingrese el primer número para realizar la operación: ");
-        String input1 = scanner.nextLine();
-        System.out.print("Por favor, ingrese el segundo número para realizar la operación: ");
-        String input2 = scanner.nextLine();
 
         try {
 
-            float num1 = Float.parseFloat(input1);
-            float num2 = Float.parseFloat(input2);
+            System.out.print("Por favor, ingrese el primer número para realizar la operación: ");
+            float num1 = Float.parseFloat(scanner.nextLine());
+            System.out.print("Por favor, ingrese el segundo número para realizar la operación: ");
+            float num2 = Float.parseFloat(scanner.nextLine());
 
             setNumero1(num1);
             setNumero2(num2);

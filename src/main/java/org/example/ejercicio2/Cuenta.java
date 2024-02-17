@@ -3,80 +3,102 @@ package org.example.ejercicio2;
 import java.util.Scanner;
 
 public class Cuenta {
-    private int numeroCuenta;
-    private String nombreCliente;
-    private String apellidoCliente;
-    private long dniCLiente;
+
+    private long numeroCuenta;
+    private String nombre;
+    private String apellido;
+    private long dni;
     private double saldoActual;
 
     public Cuenta() {
 
     }
 
-    public Cuenta(int numeroCuenta, String nombreCliente, String apellidoCliente, long dniCLiente, double saldoActual) {
+    public Cuenta(long numeroCuenta, String nombre, String apellido, long dni, double saldoActual) {
         this.numeroCuenta = numeroCuenta;
-        this.nombreCliente = nombreCliente;
-        this.apellidoCliente = apellidoCliente;
-        this.dniCLiente = dniCLiente;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
         this.saldoActual = saldoActual;
     }
 
-    public int getNumeroCuenta() {
+    public long getNumeroCuenta() {
         return numeroCuenta;
     }
 
-    public String getNombreCliente() {
-        return nombreCliente;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getApellidoCliente() {
-        return apellidoCliente;
+    public String getApellido() {
+        return apellido;
     }
 
-    public long getDniCLiente() {
-        return dniCLiente;
+    public long getDni() {
+        return dni;
     }
 
     public double getSaldoActual() {
         return saldoActual;
     }
 
-    public void setNumeroCuenta(int numeroCuenta) {
+    public void setNumeroCuenta(long numeroCuenta) {
         this.numeroCuenta = numeroCuenta;
     }
 
-    public void setNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setApellidoCliente(String apellidoCliente) {
-        this.apellidoCliente = apellidoCliente;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
-    public void setDniCLiente(long dniCLiente) {
-        this.dniCLiente = dniCLiente;
+    public void setDni(long dni) {
+        this.dni = dni;
     }
 
     public void setSaldoActual(double saldoActual) {
         this.saldoActual = saldoActual;
     }
 
-    public static Cuenta crearCuenta() {
-
-        Scanner input = new Scanner(System.in);
-        System.out.print("Por favor, ingrese el número de cuenta: ");
-        int numCuenta = Integer.parseInt(input.nextLine());
-        System.out.print("Por favor, ingrese el nombre del cliente: ");
-        String nombre = input.nextLine();
-        System.out.print("Por favor, ingrese el apellido del cliente: ");
-        String apellido = input.nextLine();
-        System.out.print("Por favor, ingrese el DNI del cliente: ");
-        long dni = Long.parseLong(input.nextLine());
-        System.out.print("Por favor, ingrese el saldo de la cuenta: ");
-        double saldo = Double.parseDouble(input.nextLine());
-
-        return new Cuenta(numCuenta, nombre, apellido, dni, saldo);
+    public void ingresar(double ingreso) {
+        saldoActual += ingreso;
+        System.out.println("Ingreso exitoso. Su saldo actual es de $" + saldoActual);
     }
 
+    public void retirar(double retiro) {
+        if(saldoActual >= retiro) {
+            saldoActual -= retiro;
+            System.out.println("Retiro exitoso. Usted ha retirado $" + retiro +
+                    ". Su saldo actual es de $" + saldoActual);
+        }
+        else {
+            double resto = saldoActual;
+            saldoActual = 0;
+            System.out.println("Saldo insuficiente para retirar $" + retiro + ". Usted ha retirado $" +
+                    resto + ". Su saldo actual es de $" + saldoActual);
+        }
+    }
 
+    public void extraccionRapida() {
+        double extraccion = saldoActual * 0.2;
+        saldoActual -= extraccion;
+        System.out.println("Extracción rápida exitosa. Usted ha retirado $" + extraccion +
+                ". Su saldo actual es de $" + saldoActual);
+    }
+
+    public void consultarSaldo() {
+        System.out.println("Su saldo actual es de $" + saldoActual);
+    }
+
+    public void consultarDatos() {
+        System.out.println("Los datos de su cuenta son:\n" + toString());
+    }
+
+    @Override
+    public String toString() {
+        return "Número de Cuenta: " + numeroCuenta + "\nNombre: " + nombre + "\nApellido: " + apellido +
+                "\nDNI: " + dni + "\nSaldo actual: $" + saldoActual;
+    }
 }

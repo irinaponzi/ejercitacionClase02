@@ -9,6 +9,8 @@ import org.example.ejercicio3.calculosFormas;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.example.ejercicio2.GestorCuentas.crearCuenta;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -37,19 +39,15 @@ public class Main {
         // Ejercicio 2
         System.out.println("EJERCICIO 02:");
 
-        Cuenta cuenta1 = new Cuenta();
-        Cuenta cuenta2 = new Cuenta();
-        Cuenta cuenta3 = new Cuenta();
-        Cuenta cuenta4 = new Cuenta();
-        Cuenta cuenta5 = new Cuenta();
+        Cuenta miCuenta = crearCuenta();
+        miCuenta.consultarDatos();
 
-        cuenta1.getNumeroCuenta();
-        cuenta2.getNumeroCuenta();
-        cuenta3.getNumeroCuenta();
-        cuenta4.getNumeroCuenta();
-        cuenta5.getNumeroCuenta();
+        miCuenta.ingresar(8500);
+        miCuenta.retirar(9000);
+        miCuenta.consultarSaldo();
+        miCuenta.ingresar(20000);
+        miCuenta.extraccionRapida();
 
-        cuenta1.getSaldoActual();
 
         // Ejercicio 3
         System.out.println("EJERCICIO 03:");
@@ -64,6 +62,5 @@ public class Main {
                 System.out.println(forma +
                     "\nSu área es: " + forma.calcularArea() +
                     "\nSu perímetro es: " + forma.calcularPerimetro()));
-
     }
 }
