@@ -4,8 +4,7 @@ public class Circulo implements calculosFormas {
 
     private double radio;
 
-    public Circulo()
-    {
+    public Circulo() {
 
     }
 
