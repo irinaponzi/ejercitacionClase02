@@ -25,7 +25,7 @@ public class GestorCuentas {
         }
         catch (NumberFormatException e) {
             System.out.println("Error, los datos ingresados no son válidos. La cuenta se creará vacía");
-            return new  Cuenta();
+            return new Cuenta();
         }
     }
 }

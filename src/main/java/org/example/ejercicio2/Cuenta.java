@@ -1,6 +1,5 @@
 package org.example.ejercicio2;
 
-import java.util.Scanner;
 
 public class Cuenta {
 
