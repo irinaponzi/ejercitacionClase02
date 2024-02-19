@@ -4,7 +4,7 @@ import org.example.ejercicio1.Operacion;
 import org.example.ejercicio2.Cuenta;
 import org.example.ejercicio3.Circulo;
 import org.example.ejercicio3.Rectangulo;
-import org.example.ejercicio3.calculosFormas;
+import org.example.ejercicio3.ICalculosFormas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,7 @@ public class Main {
         // Ejercicio 3
         System.out.println("EJERCICIO 03:");
 
-        List<calculosFormas> formasLista = new ArrayList<>();
+        List<ICalculosFormas> formasLista = new ArrayList<>();
         formasLista.add(new Circulo(35));
         formasLista.add(new Circulo(15));
         formasLista.add(new Rectangulo(45, 60));

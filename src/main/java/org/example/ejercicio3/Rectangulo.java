@@ -1,6 +1,6 @@
 package org.example.ejercicio3;
 
-public class Rectangulo implements calculosFormas {
+public class Rectangulo implements ICalculosFormas {
 
     private double base;
     private double altura;

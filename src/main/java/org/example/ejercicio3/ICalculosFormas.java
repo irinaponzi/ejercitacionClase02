@@ -1,6 +1,6 @@
 package org.example.ejercicio3;
 
-public interface calculosFormas {
+public interface ICalculosFormas {
 
     double PI = 3.14159265358979323846;
     double calcularArea();

@@ -1,6 +1,6 @@
 package org.example.ejercicio3;
 
-public class Circulo implements calculosFormas {
+public class Circulo implements ICalculosFormas {
 
     private double radio;
 
