@@ -1,3 +1,3 @@
-# Ejercicios Clase 02 
+## Ejercicios Clase 02 
+
 Bootcamp Java | Codeki
-Alumna: Irina Ponzi
